@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CV Preview</title>
+</head>
+<body>
+    <h1>CV Preview</h1>
+    <!-- Display the preview HTML -->
+    <div>
+        {{ preview|safe }}
+    </div>
+    <!-- Provide a download link for the PDF -->
+    <a href="{{ pdf_url }}" download>Download PDF</a>
+</body>
+</html>

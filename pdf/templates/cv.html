@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,20 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: #fff;
+            border-radius: 5px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        h2, h4 {
+            margin-top: 0;
+        }
+        
+        p {
+            margin-bottom: 15px;
+        }
+        
+        u {
+            text-decoration: none;
+        }
+        
+        hr {
+            border-top: 1px solid #ccc;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+    </style>
 </head>
 <body>
-	<h2>{{user.name}}</h2>
-	<h4>{{user.email}}</h4>
-	<h4>{{user.number}}</h4>
-	
-	
-	<p><u>about</u></p> 
-	<p>{{user.about}}</p>
-	
-	<p><u>Education</u></p> 
-	<p>{{user.education}}</p>
-	
-	<p><u>Skills</u></p> 
-	<p>{{user.skills}}</p>
+    <div class="container">
+        <h2>{{user.name}}</h2>
+        <h4>{{user.mail}}</h4>
+        <h4>{{user.number}}</h4>
+        <hr>
+        <h3>About</h3>
+        <p>{{user.about}}</p>
+        <hr>
+        <h3>Education</h3>
+        <p>{{user.education}}</p>
+        <hr>
+        <h3>Skills</h3>
+        <p>{{user.skills}}</p>
+    </div>
 </body>
 </html>

@@ -5,5 +5,5 @@ from pdf import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.accept, name="accept"),
-    path('<int:id>/', views.cv, name="cv")
+    path('<int:id>/', views.cv, name="cv"),
 ]

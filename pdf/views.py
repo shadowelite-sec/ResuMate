@@ -1,12 +1,11 @@
 from re import template
 from typing import Optional
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Profile
 from django.http import HttpResponse
 from django.template import loader 
 import pdfkit 
 import io
-
 
 def accept(request):
     if request.method == "POST":
@@ -17,15 +16,15 @@ def accept(request):
         skills = request.POST.get("skills", "")
         about = request.POST.get("about", "")
         interests = request.POST.get("interests", "")
-        
+
         profile = Profile(name=name, phone=phone, mail=mail, education=education, skills=skills, about=about, interests=interests)
         profile.save()
         
     return render(request, "accept.html")
-    
+
 def cv(request, id):
     user = Profile.objects.get(pk=id)
-    template = loader.get_template("resume.html")
+    template = loader.get_template("cv.html")
     html = template.render({'user':user})
     option={
             'page-size': 'Letter',
