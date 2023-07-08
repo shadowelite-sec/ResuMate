@@ -3,7 +3,7 @@
 install 
 ```
 $ python3 -m venv .env
-$ pip3 install django pdfkit
 $ source .env/bin/activate
+$ pip3 install django pdfkit
 $ ./manage.py runserver
 ```
