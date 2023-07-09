@@ -1,5 +1,3 @@
-from re import template
-from typing import Optional
 from django.shortcuts import render, redirect
 from .models import Profile
 from django.http import HttpResponse
@@ -28,9 +26,14 @@ def cv(request, id):
     html = template.render({'user':user})
     option={
             'page-size': 'Letter',
-            'encoding': 'UTF-8'
+            'encoding': 'UTF-8',
         }
     pdf = pdfkit.from_string(html, False, option)
     response = HttpResponse(pdf, content_type = 'application/pdf')
     response['Content-Disposition'] = 'attachments'
+    filename = "resume.pdf"
     return response
+
+def list(request):
+    profile=Profile.objects.all()
+    return render(request, "list.html",{'profile':profile})
