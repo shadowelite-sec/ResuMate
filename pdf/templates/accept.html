@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
     <style>
+        /* Existing styles */
+
+        /* Additional styles for dark mode */
         body.dark-mode {
             background-color: #1E1E2E;
             color: #f8f8f8;
@@ -36,22 +39,37 @@
         </div>
 
         <form method="POST">
-	    {% csrf_token %}
+            {% csrf_token %}
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
             </div>
             <div class="form-group">
                 <label for="phone">Phone</label>
-                <input type="text" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
+                <input type="number" class="form-control" id="phone" name="phone" placeholder="Enter your phone number">
             </div>
             <div class="form-group">
                 <label for="mail">Email</label>
                 <input type="email" class="form-control" id="mail" name="mail" placeholder="Enter your email">
             </div>
             <div class="form-group">
-                <label for="education">Education</label>
-                <input type="text" class="form-control" id="education" name="education" placeholder="Enter your Education">
+                <label for="education_school">School</label>
+                <input type="text" class="form-control" id="education_school" name="education_school" placeholder="Enter your school">
+            </div>
+            <div class="form-group">
+                <label for="education_degree">Degree</label>
+                <select class="form-control" id="degree" name="degree">
+                    <option value="">Select your degree</option>
+                    <option value="BCA">BCA</option>
+                    <option value="BSc">BSc</option>
+                    <option value="Computer Science">Computer Science</option>
+                    <option value="Engineering">Engineering</option>
+                    <!-- Add more options as needed -->
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="education_date">Date</label>
+                <input type="text" class="form-control" id="education_date" name="education_date" placeholder="Enter the date">
             </div>
             <div class="form-group">
                 <label for="skills">Skills</label>
@@ -66,11 +84,11 @@
                 <textarea class="form-control" id="interests" name="interests" rows="4" placeholder="Write a brief description about your interests"></textarea>
             </div>
             <div class="text-center">
-                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="submit" class="btn btn-outline-primary">Submit</button>
+                <a href="/list"><button type="button" class="btn btn-outline-danger">Download</button></a>
             </div>
         </form>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script>
@@ -85,4 +103,3 @@
         });
     </script>
 </body>
-</html>

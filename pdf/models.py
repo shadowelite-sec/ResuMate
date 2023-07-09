@@ -8,6 +8,7 @@ class Profile(models.Model):
     skills = models.TextField(max_length=1000)
     about = models.TextField(max_length=500)
     education = models.TextField(max_length=500)
+    degree = models.TextField(max_length=500,default='')
     work_experience = models.TextField(max_length=500)
     interests = models.TextField(max_length=500)
     open_source_projects = models.TextField(max_length=500)

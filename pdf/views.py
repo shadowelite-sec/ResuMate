@@ -14,8 +14,9 @@ def accept(request):
         skills = request.POST.get("skills", "")
         about = request.POST.get("about", "")
         interests = request.POST.get("interests", "")
+        degree = request.POST.get("degree", "")
 
-        profile = Profile(name=name, phone=phone, mail=mail, education=education, skills=skills, about=about, interests=interests)
+        profile = Profile(name=name, phone=phone, mail=mail, education=education, skills=skills, about=about, interests=interests, degree=degree)
         profile.save()
         
     return render(request, "accept.html")
