@@ -4,7 +4,7 @@ ResuMate is an automated resume generator, specially for those who dosent like t
 
 We wanted to provide you with an free to use, user-fiendly software and hopefully we have done that
 
-[img](./img.png)
+![img](./img.png)
 ## tools and lib used
 
 For the creation if this tool, we have used html, css, bootstrap, and for backend, we have used python and django
