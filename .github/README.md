@@ -1,4 +1,5 @@
 # 📜 ResuMate 
+> **Note**
 
 ResuMate is an automated resume generator, specially for those who dosent like to write their long resume
 
@@ -14,7 +15,7 @@ The user does not require any login, thus they can create their reumes avoiding 
 
 
 ### installation 
-**Warning**
+> **Warning**
 
 need an external pkg `wkhtmltopdf`
 
