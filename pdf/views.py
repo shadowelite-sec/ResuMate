@@ -31,7 +31,6 @@ def cv(request, id):
     pdf = pdfkit.from_string(html, False, option)
     response = HttpResponse(pdf, content_type = 'application/pdf')
     response['Content-Disposition'] = 'attachments'
-    filename = "resume.pdf"
     return response
 
 def list(request):
